@@ -1,35 +1,22 @@
 # Magento 2 Module DansMultiPro LOM
-
-    ``dansmultipro/module-lom``
-
- - [Main Functionalities](#markdown-header-main-functionalities)
- - [Installation](#markdown-header-installation) 
-
-
-## Main Functionalities
-This is for interview test
+Upload file data in CMS and retrieve data via webrest api
 
 ## Installation
 \* = in production please use the `--keep-generated` option
 
-### Type 1: Zip file
-
- - Unzip the zip file in `app/code/DansMultiPro`
+### From terminal
  - Enable the module by running `php bin/magento module:enable DansMultiPro_LOM`
  - Apply database updates by running `php bin/magento setup:upgrade`\*
  - Flush the cache by running `php bin/magento cache:flush`
+ - Make sure Magento has sufficient perimission to write, insert, delete file in Magento media repository
 
-### Type 2: Composer
+## CMS
+Navigate to DansMultiPro > Material > Choose one of the record to edit or click  `Add new Material` button to create a new record
 
- - Make the module available in a composer repository for example:
-    - private repository `repo.magento.com`
-    - public repository `packagist.org`
-    - public github repository as vcs
- - Add the composer repository to the configuration by running `composer config repositories.repo.magento.com composer https://repo.magento.com/`
- - Install the module composer by running `composer require dansmultipro/module-lom`
- - enable the module by running `php bin/magento module:enable DansMultiPro_LOM`
- - apply database updates by running `php bin/magento setup:upgrade`\*
- - Flush the cache by running `php bin/magento cache:flush`
+## Rest API
+Postman collection is included `DansMultiPro_Lom.postman_collection_v2-1.json` , you can use this as a guidance on how to access the webrest api
+
+
 
 
 
