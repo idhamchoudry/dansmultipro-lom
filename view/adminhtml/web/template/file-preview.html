@@ -1,0 +1,20 @@
+<div class="file-uploader-summary">
+    <div class="file-uploader-preview" style="height: 70px;padding: 10px 5px;">
+        <a attr="href: $parent.getFilePreview($file)" target="_blank">
+            <p data-bind="i18n: 'Download File'"></p>
+        </a>
+
+        <div class="actions">
+            <button
+                type="button"
+                class="action-remove"
+                data-role="delete-button"
+                attr="title: $t('Delete File')"
+                click="$parent.removeFile.bind($parent, $file)">
+                <span translate="'Delete File'"/>
+            </button>
+        </div>
+    </div>
+
+    <div class="file-uploader-filename" text="$file.name"/>
+</div>

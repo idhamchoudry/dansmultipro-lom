@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="dansmultipro_lom_material" resource="default" engine="innodb" comment="dansmultipro_lom_material Table">
+		<column xsi:type="int" name="material_id" padding="10" unsigned="true" nullable="false" identity="true" comment="Entity Id"/>
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="material_id"/>
+		</constraint>
+		<column name="title" nullable="true" xsi:type="varchar" comment="title" length="255"/>
+		<column name="summary" nullable="true" xsi:type="text" comment="summary"/>
+		<column name="image" nullable="true" xsi:type="varchar" comment="image" length="255"/>
+		<column name="file" nullable="true" xsi:type="varchar" comment="file" length="255"/>
+		<column name="created_at" nullable="true" xsi:type="varchar" comment="created_at" length="255"/>
+		<column name="updated_at" nullable="true" xsi:type="varchar" comment="updated_at" length="255"/>
+	</table>
+</schema>

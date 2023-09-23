@@ -1,0 +1,60 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="DansMultiPro\LOM\Api\MaterialRepositoryInterface" type="DansMultiPro\LOM\Model\MaterialRepository"/>
+	<preference for="DansMultiPro\LOM\Api\Data\MaterialInterface" type="DansMultiPro\LOM\Model\Material"/>
+	<preference for="DansMultiPro\LOM\Api\Data\MaterialSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="DansMultiPro\LOM\Model\ResourceModel\Material\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">dansmultipro_lom_material</argument>
+			<argument name="resourceModel" xsi:type="string">DansMultiPro\LOM\Model\ResourceModel\Material\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="dansmultipro_lom_material_listing_data_source" xsi:type="string">DansMultiPro\LOM\Model\ResourceModel\Material\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+	<type name="DansMultiPro\LOM\Model\FileUploader">
+	    <arguments>
+	        <argument name="baseTmpPath" xsi:type="string">dansmultipro_lom_/file</argument>
+	        <argument name="basePath" xsi:type="string">dansmultipro_lom_/file</argument>
+	        <argument name="allowedExtensions" xsi:type="array">
+				<!-- video file format  -->
+				<item name="mp4" xsi:type="string">mp4</item>
+				<item name="mov" xsi:type="string">mov</item>
+				<item name="avi" xsi:type="string">avi</item>
+				<!-- Audio file format -->
+	            <item name="mp3" xsi:type="string">mp3</item>
+	            <item name="m4a" xsi:type="string">m4a</item>
+	            <item name="aac" xsi:type="string">aac</item>
+	            <item name="wav" xsi:type="string">wav</item>
+				<!-- file format -->
+	            <item name="pdf" xsi:type="string">pdf</item>
+	            <item name="docx" xsi:type="string">docx</item>
+	            <item name="doc" xsi:type="string">doc</item>
+	            <item name="xls" xsi:type="string">xls</item>
+	            <item name="xlsx" xsi:type="string">xlsx</item>
+	            <item name="ppt" xsi:type="string">ppt</item>
+	            <item name="pptx" xsi:type="string">pptx</item>
+	            <item name="zip" xsi:type="string">zip</item>
+				<!-- image file format -->
+	            <item name="jpeg" xsi:type="string">jpeg</item>
+	            <item name="gif" xsi:type="string">gif</item>
+	            <item name="png" xsi:type="string">png</item>
+	        </argument>
+	    </arguments>
+	</type>
+	<type name="DansMultiPro\LOM\Model\ImageUploader">
+	    <arguments>
+	        <argument name="baseTmpPath" xsi:type="string">dansmultipro_lom_/image</argument>
+	        <argument name="basePath" xsi:type="string">dansmultipro_lom_/image</argument>
+	        <argument name="allowedExtensions" xsi:type="array">
+	            <item name="jpeg" xsi:type="string">jpeg</item>
+	            <item name="gif" xsi:type="string">gif</item>
+	            <item name="png" xsi:type="string">png</item>
+	        </argument>
+	    </arguments>
+	</type>
+</config>

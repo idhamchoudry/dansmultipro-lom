@@ -1,0 +1,7 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+	<menu>
+		<add id="DansMultiPro::top_level" title="DansMultiPro" module="DansMultiPro_LOM" sortOrder="9999" resource="Magento_Backend::content"/>
+		<add id="DansMultiPro_LOM::dansmultipro_lom_material" title="Material" module="DansMultiPro_LOM" sortOrder="9999" resource="Magento_Backend::content" parent="DansMultiPro::top_level" action="dansmultipro_lom/material/index"/>
+	</menu>
+</config>
